@@ -1,0 +1,3 @@
+[remote "origin"]
+ url = https://github.com/patomarques/wp-desterro-child.git
+ fetch = +refs/heads/*:refs/remotes/origin/*
