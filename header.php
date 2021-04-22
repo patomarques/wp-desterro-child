@@ -12,6 +12,7 @@
 
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 	
 </head>
 
@@ -34,8 +35,8 @@
             <div class="row">
                 <div class="col-6 col-md-4 offset-md-4 text-center">
                     <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img class="navbar-brand__image hidden" src="<?php echo get_stylesheet_directory_uri( ) . '/assets/img/logo/logo.svg'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
-						<h1 class="logo">Desterro</h1>
+						<img class="navbar-brand__image" src="<?php echo get_stylesheet_directory_uri( ) . '/assets/img/logo.png'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+						<!-- <h1 class="logo">Desterro</h1> -->
                     </a>
                 </div>
                 <div class="col-6 col-md-4">
