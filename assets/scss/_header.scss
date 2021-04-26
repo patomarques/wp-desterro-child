@@ -2,11 +2,11 @@
   padding: 30px 0;
 
   &--dark{
-    background-color: $color-black;
+    background-color: $purple;
 
     .button_container{
       span{
-        background-color: $color-white;
+        background-color: $white;
       }
     }
   }
@@ -30,18 +30,18 @@
 
 .button_container.active .top {
   transform: translateY(11px) translateX(0) rotate(45deg);
-  background: $color-white;
+  background: $white;
 }
 .button_container.active .middle {
   opacity: 0;
-  background: $color-white;
+  background: $white;
 }
 .button_container.active .bottom {
   transform: translateY(-11px) translateX(0) rotate(-45deg);
-  background: $color-white;
+  background: $white;
 }
 .button_container span {
-  background: $color-black;
+  background: $purple;
   border: none;
   height: 1px;
   width: 100%;
@@ -60,7 +60,7 @@
 
 .overlay {
   position: fixed;
-  background: $color-black;
+  background: $purple;
   top: 0;
   left: 0;
   width: 100%;
@@ -95,7 +95,6 @@
   top: 35%;
   transform: translateY(-50%);
   font-size: 2.2rem;
-  font-family: "Varela Round", serif;
   font-weight: 400;
   text-align: center;
 }
@@ -118,7 +117,7 @@
 .overlay ul li a {
   display: block;
   position: relative;
-  color: $color-white;
+  color: $white;
   text-decoration: none;
   overflow: hidden;
 }
@@ -135,7 +134,7 @@
   width: 0%;
   transform: translateX(-50%);
   height: 3px;
-  background: $color-white;
+  background: $white;
   transition: 0.35s;
 }
 
