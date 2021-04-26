@@ -30,7 +30,7 @@
 <a href="#main" class="sr-only sr-only-focusable"><?php _e( 'Skip to main content', 'wp_lula_cortes' ); ?></a>
 
 <div id="wrapper">
-    <header class="menu-main menu-main--dark">
+    <header class="menu-main">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md-4 offset-md-4 text-center">
