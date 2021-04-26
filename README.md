@@ -18,5 +18,3 @@ Requeriments
 
 - WordPress >= 4.7
 - PHP >= 7.0
-- [Composer](https://getcomposer.org)
-- [Node.js](https://nodejs.org)
