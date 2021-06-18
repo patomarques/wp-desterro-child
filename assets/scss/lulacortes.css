@@ -1,3 +1,17 @@
+@charset "UTF-8";
+.color-white {
+  color: #ffffff;
+}
+
+.title-section {
+  font-size: 3rem;
+}
+
+.title-sub {
+  margin-top: -20px;
+  font-size: 2rem;
+}
+
 html,
 body {
   overflow-x: hidden !important;
@@ -47,12 +61,80 @@ body {
   padding-bottom: 60%;
 }
 
+.description {
+  font-size: 1.2rem;
+}
+
+.bg-gradient-degrade {
+  background: #833ab4;
+  background: -webkit-gradient(linear, left top, right top, from(#242336), color-stop(0%, #833ab4), color-stop(#9ea2f2), to(#A1ADEB));
+  background: linear-gradient(90deg, #242336, #833ab4 0%, #9ea2f2, #A1ADEB);
+  width: 100%;
+  height: 2px;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.2rem;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(20vh, 200px);
+}
+
+.gallery li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 20vh;
+  margin: .12rem;
+  width: 20rem;
+  min-width: 15rem;
+}
+
+@supports (display: grid) {
+  .gallery li {
+    height: initial;
+    margin: unset;
+    width: initial;
+    min-width: initial;
+  }
+  .gallery li:nth-of-type(2n + 2) {
+    grid-row: span 2;
+  }
+}
+
+.content-section {
+  margin: 120px 0;
+}
+
+.text-information {
+  font-size: 2rem;
+}
+
+.link-email {
+  color: #212D6C;
+  overflow-wrap: break-word;
+}
+
+.link-email:hover {
+  text-decoration: none !important;
+  opacity: 0.7;
+}
+
 .menu-main {
   padding: 30px 0;
 }
 
 .menu-main--dark {
-  background-color: #434165;
+  background-color: #435bd8;
 }
 
 .menu-main--dark .button_container span {
@@ -94,7 +176,7 @@ body {
 }
 
 .button_container span {
-  background: #434165;
+  background: #435bd8;
   border: none;
   height: 1px;
   width: 100%;
@@ -116,7 +198,7 @@ body {
 
 .overlay {
   position: fixed;
-  background: #434165;
+  background: #435bd8;
   top: 0;
   left: 0;
   width: 100%;
@@ -301,5 +383,148 @@ footer {
 .map-responsive {
   width: 100%;
   height: 60vh;
+}
+
+.card-perfil__img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.card-perfil .social-icons i {
+  font-size: 1.3rem;
+  color: #212D6C;
+}
+
+.card-perfil .social-icons i.fa-facebook-f {
+  top: -2px;
+}
+
+.card-perfil .social-icons__item {
+  margin: 0 10px;
+}
+
+.grid-movies li:nth-of-type(1) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-1.jpg);
+}
+
+.grid-movies li:nth-of-type(2) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-2.jpg);
+}
+
+.grid-movies li:nth-of-type(3) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-3.jpg);
+}
+
+.grid-movies li:nth-of-type(4) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-4.jpg);
+}
+
+.grid-movies li:nth-of-type(5) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-5.jpg);
+}
+
+.grid-movies li:nth-of-type(6) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-6.jpg);
+}
+
+.grid-movies li:nth-of-type(7) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-7.jpg);
+}
+
+.grid-movies li:nth-of-type(8) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-8.jpg);
+}
+
+.grid-movies li:nth-of-type(9) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-9.jpg);
+}
+
+.grid-movies li:nth-of-type(10) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-10.jpg);
+}
+
+.grid-movies li:nth-of-type(11) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-11.jpg);
+}
+
+.grid-movies li:nth-of-type(12) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-12.jpg);
+}
+
+.grid-movies li:nth-of-type(13) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-13.jpg);
+}
+
+.grid-movies li:nth-of-type(14) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-14.jpg);
+}
+
+.grid-movies li:nth-of-type(15) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-15.jpg);
+}
+
+.grid-movies li:nth-of-type(16) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-16.jpg);
+}
+
+.grid-movies li:nth-of-type(17) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-17.jpg);
+}
+
+.grid-movies li:nth-of-type(18) {
+  background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/150150/bug-18.jpg);
+}
+
+.grid-movies ul, .grid-movies li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.grid-movies li {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  line-height: 3;
+  overflow: hidden;
+}
+
+.grid-movies li:hover .🐜-title, .grid-movies li:focus .🐜-title {
+  background-color: #041b49;
+  height: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.grid-movies .🐜-title {
+  background-color: rgba(4, 27, 73, 0.5);
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: padding .3s ease-in-out, background-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: padding .3s ease-in-out, background-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: padding .3s ease-in-out, background-color .3s ease-in-out, transform .3s ease-in-out;
+  transition: padding .3s ease-in-out, background-color .3s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 /*# sourceMappingURL=lulacortes.css.map */

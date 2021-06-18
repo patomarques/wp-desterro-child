@@ -11,8 +11,14 @@
 
 ?>
 
-    <footer class="container mt-5">
-        <div class="row">
+    <footer class="container">
+        <div class="row mb-5">
+            <div class="col-12">
+                <img src="<?= get_stylesheet_directory_uri() . "/assets/img/patrocinadores.png" ?>" alt="Apoiadores" 
+                class="img-fluid logo-apoiadores d-block m-auto">
+            </div>
+        </div>
+        <div class="row pb-2">
             <div class="col-12 text-center">
             
                 <div class="bootscore-info text-muted text-center">

@@ -9,7 +9,7 @@
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/light-v10',
-            center: [-8.0589,-34.8847],
+            center: [-8.0589, -34.8847],
             zoom: 4
         });
 
@@ -68,15 +68,38 @@
 
         geojson.features.forEach(function(marker) {
 
-          // create a HTML element for each feature
-          var el = document.createElement('div');
-          el.className = 'marker';
+            // create a HTML element for each feature
+            var el = document.createElement('div');
+            el.className = 'marker';
 
-          // make a marker for each feature and add to the map
-          new mapboxgl.Marker(el)
-              .setLngLat(marker.geometry.coordinates)
-              .addTo(map);
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .addTo(map);
         });
+
+        const target = {
+            clicked: 0,
+            currentFollowers: 90,
+            btn: document.querySelector("a.btn"),
+            fw: document.querySelector("span.followers")
+        };
+
+        const follow = () => {
+            target.clicked += 1;
+            target.btn.innerHTML = 'Following <i class="fas fa-user-times"></i>';
+
+            if (target.clicked % 2 === 0) {
+                target.currentFollowers -= 1;
+                target.btn.innerHTML = 'Follow <i class="fas fa-user-plus"></i>';
+            } else {
+                target.currentFollowers += 1;
+            }
+
+            target.fw.textContent = target.currentFollowers;
+            target.btn.classList.toggle("following");
+        }
+
     });
 
 })(jQuery);

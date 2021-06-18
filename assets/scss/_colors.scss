@@ -1,11 +1,21 @@
+$black: #000000;
 $white: #ffffff;
 $gray: #e5e5e5;
-$black: #000000;
 
+$purple-dark: #242336;
+$purple: #435bd8;
+$purple-super-dark: #212D6C;
 $purple-light: #9ea2f2;
-$purple-dark: #9ea2f2;
-$purple: #434165;
+$purple-super-light: #A1ADEB;
+$purple-ultra-light: #D9DEF7;
 
 $gray-dark: #0a0b15;
 $gray-soft: #635d6c;
 $gray-skin: #535c67;
+
+$brand-primary: $purple-super-dark;
+$brand-secundary: $purple-super-light;
+
+.color-white{
+    color: $white;  
+}

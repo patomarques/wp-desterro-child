@@ -25,6 +25,8 @@
 
 <body <?php body_class(); ?>>
 
+<div class="bg-gradient-degrade"></div>
+
 <?php wp_body_open(); ?>
 
 <a href="#main" class="sr-only sr-only-focusable"><?php _e( 'Skip to main content', 'wp_lula_cortes' ); ?></a>
@@ -56,10 +58,22 @@
                             ?>
                         </nav>
 
-                        <ul class="social-icons list-inline text-center">
-                            <li class="social-icons__item d-inline"><a href="#" class="social-icons__link social-icons__link--actived"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="social-icons__item d-inline"><a href="#" class="social-icons__link"><i class="fab fa-instagram"></i></a></li>
-                            <li class="social-icons__item d-inline"><a href="#" class="social-icons__link"><i class="fab fa-youtube"></i></a></li>
+                        <ul class="social-icons d-flex justify-content-center text-center">
+                            <li class="social-icons__item d-inline-flex">
+                                <a href="#" class="social-icons__link social-icons__link--actived">
+                                    <i class="fab fa-facebook-f color-white"></i>
+                                </a>
+                            </li>
+                            <li class="social-icons__item d-inline-flex">
+                                <a href="#" class="social-icons__link ">
+                                    <i class="fab fa-instagram color-white"></i>
+                                </a>
+                            </li>
+                            <li class="social-icons__item d-inline-flex">
+                                <a href="#" class="social-icons__link ">
+                                    <i class="fab fa-youtube color-white"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
