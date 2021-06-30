@@ -56,25 +56,26 @@
                                     )
                                 );
                             ?>
+                            <ul class="social-icons d-flex justify-content-center text-center">
+                                <li class="social-icons__item d-inline-flex">
+                                    <a href="#" class="social-icons__link social-icons__link--actived">
+                                        <i class="fab fa-facebook-f color-white"></i>
+                                    </a>
+                                </li>
+                                <li class="social-icons__item d-inline-flex">
+                                    <a href="#" class="social-icons__link ">
+                                        <i class="fab fa-instagram color-white"></i>
+                                    </a>
+                                </li>
+                                <li class="social-icons__item d-inline-flex">
+                                    <a href="#" class="social-icons__link ">
+                                        <i class="fab fa-youtube color-white"></i>
+                                    </a>
+                                </li>
+                            </ul>
                         </nav>
 
-                        <ul class="social-icons d-flex justify-content-center text-center">
-                            <li class="social-icons__item d-inline-flex">
-                                <a href="#" class="social-icons__link social-icons__link--actived">
-                                    <i class="fab fa-facebook-f color-white"></i>
-                                </a>
-                            </li>
-                            <li class="social-icons__item d-inline-flex">
-                                <a href="#" class="social-icons__link ">
-                                    <i class="fab fa-instagram color-white"></i>
-                                </a>
-                            </li>
-                            <li class="social-icons__item d-inline-flex">
-                                <a href="#" class="social-icons__link ">
-                                    <i class="fab fa-youtube color-white"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        
                     </div>
                 </div>
             </div>
