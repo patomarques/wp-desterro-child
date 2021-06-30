@@ -87,7 +87,7 @@ body {
   grid-auto-rows: minmax(20vh, 200px);
 }
 
-.gallery li {
+.gallery .gallery__item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -97,26 +97,29 @@ body {
   margin: .12rem;
   width: 20rem;
   min-width: 15rem;
+  -webkit-transition: ease-in-out 250ms;
+  transition: ease-in-out 250ms;
+}
+
+.gallery .gallery__item:hover {
+  cursor: pointer;
+  opacity: .7;
 }
 
 @supports (display: grid) {
-  .gallery li {
+  .gallery .gallery__item {
     height: initial;
     margin: unset;
     width: initial;
     min-width: initial;
   }
-  .gallery li:nth-of-type(2n + 2) {
+  .gallery .gallery__item:nth-of-type(2n + 2) {
     grid-row: span 2;
   }
 }
 
 .content-section {
   margin: 120px 0;
-}
-
-.text-information {
-  font-size: 2rem;
 }
 
 .link-email {
@@ -514,6 +517,7 @@ footer {
 }
 
 .grid-movies .🐜-title {
+  display: none;
   background-color: rgba(4, 27, 73, 0.5);
   color: #fff;
   font-size: 0.8rem;

@@ -69,10 +69,6 @@ body {
   height: 2px;  
 }
 
-
-
-
-
 .gallery {
 	
 	// Flexbox Default/Fallback - does not produce 100% matching result 
@@ -88,16 +84,21 @@ body {
 	// grid-auto-rows: minmax(0, 1fr);
   // grid-auto-rows: minmax(0, 1fr);
   //	grid-auto-flow: dense;
-
 	
 	// flexbox fallback	
-	li {		
+	.gallery__item {		
 		flex: 0 0 auto;
 		flex-wrap: wrap;
 		height: 20vh;
 		margin: .12rem;
 		width: 20rem;
 		min-width: 15rem;
+    transition: ease-in-out 250ms;
+
+    &:hover{
+      cursor: pointer;
+      opacity: .7;
+    }
 
 		@supports ( display: grid ) {
 			//unset the propertied used for flexbox fallback
@@ -115,12 +116,6 @@ body {
 
 .content-section{
   margin: 120px 0;
-}
-
-
-
-.text-information{
-  font-size: 2rem;
 }
 
 .link-email{
