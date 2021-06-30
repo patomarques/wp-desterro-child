@@ -8,29 +8,38 @@ $page_id = get_option( 'page_for_posts' );
 <div id='map' class="map-responsive"></div>
 
 <section id="intro" class="container content-section">
-    <div class="row">
-        <div class="col-12 col-md-6 text-center">
-            <h2 class="title-section bold pt-4">Sobre</h2>
-            <h3 class="title-sub">projeto desterro</h3>
+  <div class="row">
+      
+      <div class="col-12 text-center">
+        <h2 class="title-section bold pt-4">Sobre</h2>
+        <h3 class="title-sub">projeto desterro</h3>
 
-            <p class="description pt-4">
-                Com o que sonhamos quando desejamos outras realidades?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente facere, quos voluptates illum quae laboriosam odio nobis quas ut reprehenderit impedit debitis omnis, suscipit nam, animi vel architecto eveniet illo.                
-            </p>
-        </div>
-        <div class="col-12 col-md-6">
-            <div class="square-image square-border-effect">
-                <!-- <img src="" alt=""> -->
-            </div>
-        </div>
-    </div>
+        <p class="description pt-4">
+          Aprendemos muito sobre os limites de nossas capacidades comunicativas quando contamos e ouvimos relatos de sonho. Se prestarmos atenção vamos descobrir que são muito elaborados os mecanismos que acionamos para relatar um sonho tal qual ele nos acometeu. Nos diz muito sobre a capacidade humana de contar histórias. E, por isso, nos fala sobre quem somos.
+        </p>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-12 col-md-6 text-center">
+          <p class="description pt-4">
+          Ao reunirmos num mapa relatos de sonhos de diversos habitantes de uma mesma cidade criamos uma outra geografia? É possível conhecer algo da pessoa apenas por aquilo que ela sonhou? Com o que sonhamos quando desejamos outras realidades? Com o que sonhamos quando dormimos em meio à luta? Não pretendemos encontrar respostas, mas estamos muito interessados em ver onde algumas perguntas são capazes de nos levar. <br><br>
+
+          Financiado pela Lei Aldir Blanc, o Projeto Desterro é uma plataforma  colaborativa para o compartilhamento de vídeos com relatos de sonho, ancorados na região em que a pessoa habita. Por enquanto montamos o mapa com relatos apenas de moradores da Região Metropolitana do Recife, mas em breve vamos expandir nossa cartografia por outros espaços. Nos interessa, sobretudo, multiplicar e amplificar narrativas que reforcem a pluralidade de subjetividades, considerando todo o potencial simbólico, pessoal e reflexivo dos sonhos. 
+          </p>
+      </div>
+      <div class="col-12 col-md-6">
+          <div class="about-box">
+              <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo-art.png" alt="" class="img-responsive about-box__image">
+          </div>
+      </div>
+  </div>
 </section>
 
 <section id="message-send-mail" class="container-full">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center">
-        <h3 class="text-information">Compartilhe conosco seu sonho, envie-nos um email contando <br/><a href="mailto: tiveumsonho@desterro.com.br" class="link-email bold">tiveumsonho@desterro.com.br</a> </h3>
+      <div class="col-12 offset-lg-2 col-lg-8 text-center">
+        <h3 class="text-information">Para embarcar nessa jornada com a gente é só enviar um vídeo (em tela horizontal) contando um sonho seu, qualquer sonho, para o email <br/><a href="mailto: desterroprojeto@gmail.com" class="link-email bold">desterroprojeto@gmail.com</a> </h3>
       </div>
     </div>
   </div>
@@ -41,7 +50,7 @@ $page_id = get_option( 'page_for_posts' );
         <div class="row">
             <div class="col-12 text-center pb-3">
                 <h2 class="title-section bold">Sonhos</h2>
-                <h3 class="title-sub">Lorem ipsum dolor</h3>
+                <h3 class="title-sub">galeria de vídeos</h3>
             </div>
             <div class="col-12">
                 <p class="description"></p>
@@ -50,24 +59,36 @@ $page_id = get_option( 'page_for_posts' );
         <div class="row">
           <div class="col-12">
             <ul class="gallery">
-              <li><h2 class="🐜-title">Dragonfly</h2></li>
-              <li><h2 class="🐜-title">Bug</h2></li>
-              <li><h2 class="🐜-title">Beetle</h2></li>
-              <li><h2 class="🐜-title">Bee</h2></li>
-              <li><h2 class="🐜-title">Grasshopper</h2></li>
-              <li><h2 class="🐜-title">Monarch</h2></li>
-              <li><h2 class="🐜-title">Fly</h2></li>
-              <li><h2 class="🐜-title">Ladybug</h2></li>
-              <li class="featured"><h2 class="🐜-title">Dragon fly</h2></li>
-              <li><h2 class="🐜-title">Fake Ladybug</h2></li>
-              <li><h2 class="🐜-title">Amazing-Looking Bug</h2></li>
-              <!-- <li class="mantis"><h2 class="🐜-title">Praying Mantis</h2></li>
-              <li><h2 class="🐜-title">Bee</h2></li>
-              <li><h2 class="🐜-title">Grasshopper</h2></li>
-              <li><h2 class="🐜-title">Butterfly or Moth</h2></li>
-              <li><h2 class="🐜-title">Beetle</h2></li>
-              <li><h2 class="🐜-title">Catepillar</h2></li>
-              <li><h2 class="🐜-title">Ladybug</h2></li> -->
+              <li class="gallery__item">
+                <h2 class="🐜-title">Dragonfly</h2>
+              </li>
+              <li class="gallery__item">
+                <h2 class="🐜-title">Bug</h2>
+              </li>
+              <li class="gallery__item">
+                <h2 class="🐜-title">Beetle</h2>
+              </li>
+              <li class="gallery__item">
+                <h2 class="🐜-title">Bee</h2>
+              </li>
+              <li class="gallery__item">
+                <h2 class="🐜-title">Grasshopper</h2>
+              </li>
+              <li class="gallery__item">
+                <h2 class="🐜-title">Monarch</h2>
+              </li>
+              <li class="gallery__item">
+                <h2 class="🐜-title">Fly</h2>
+              </li>
+              <li class="gallery__item">
+                <h2 class="🐜-title">Ladybug</h2>
+              </li>
+              <li class="gallery__item">
+                <h2 class="🐜-title">Fake Ladybug</h2>
+              </li>
+              <li class="gallery__item">
+                <h2 class="🐜-title">Amazing-Looking Bug</h2>
+              </li>
             </ul>
           </div>
       </div>
