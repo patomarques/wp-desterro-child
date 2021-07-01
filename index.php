@@ -54,9 +54,6 @@ $page_id = get_option( 'page_for_posts' );
                 <h2 class="title-section bold">Sonhos</h2>
                 <h3 class="title-sub">galeria de vídeos</h3>
             </div>
-            <div class="col-12">
-                <p class="description"></p>
-            </div>
         </div>
         <div class="row">
           <div class="col-12">
@@ -65,7 +62,9 @@ $page_id = get_option( 'page_for_posts' );
               <?php while ( $queryDreams->have_posts() ) : $queryDreams->the_post(); ?>
 
                 <li class="gallery__item" style="background-image: url(<?= the_post_thumbnail_url() ?>)">
-                  <h2 class="🐜-title"></h2>
+                  <a href="<?= get_post_custom()['link'][0] ?>" target="_blank" class="gallery__item__link">
+                    <h2 class="🐜-title"></h2>
+                  </a>
                 </li>
 
               <?php 
@@ -95,14 +94,14 @@ $page_id = get_option( 'page_for_posts' );
     <div class="row text-center">
       <?php while ( $queryMembers->have_posts() ) : $queryMembers->the_post(); ?>
 
-        <div class="col-3 d-flex align-center">
+        <div class="col-3 ">
           <div class="card-perfil">
               <div class="card-perfil__header ">
                 <img class="card-perfil__img rounded-circle" src="<?= the_post_thumbnail_url() ?>" alt="<?= get_the_title() ?>">
               </div>
               <div class="card-body text-center">
-                <h5 class="card-title"><?= the_title() ?></h5>
-                <h6 class="card-title"><?= get_post_custom()['Função'][0] ?></h6>
+                <h5 class="card-title mb-0"><?= the_title() ?></h5>
+                <h6 class="card-title bold "><?= get_post_custom()['Função'][0] ?></h6>
                 <p class="card-text hidden">Professional resume</p>
                 <ul class="social-icons d-none justify-content-center text-center">
                     <li class="social-icons__item d-flex"><a href="#" class="social-icons__link social-icons__link--actived"><i class="fab fa-facebook-f"></i></a></li>
@@ -120,6 +119,32 @@ $page_id = get_option( 'page_for_posts' );
     </div>
   </div>
 </section>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <?php
 get_footer();

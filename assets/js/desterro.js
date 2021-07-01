@@ -1,5 +1,10 @@
 (function($) {
     $(document).ready(function() {
+        // $('.modal-bs').on('shown.bs.modal', function () {
+        //     $('#myInput').trigger('focus')
+        // });
+
+          
         $('#toggle').click(function() {
             $(this).toggleClass('active');
             $('#overlay').toggleClass('open');

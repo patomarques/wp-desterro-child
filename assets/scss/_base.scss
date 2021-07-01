@@ -86,7 +86,7 @@ body {
   //	grid-auto-flow: dense;
 	
 	// flexbox fallback	
-	.gallery__item {		
+	&__item {		
 		flex: 0 0 auto;
 		flex-wrap: wrap;
 		height: 20vh;
@@ -111,11 +111,19 @@ body {
 				grid-row: span 2;
 			}
 		}
+
+
+    &__link{
+      width: auto;
+      height: 100vh;
+      display: block;
+    }
 	}
 }
 
 .content-section{
-  margin: 80px 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .link-email{
