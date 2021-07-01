@@ -13,6 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() . '/assets/scss/desterro.css' ?>">
 	
 </head>
 

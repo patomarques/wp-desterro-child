@@ -1,8 +1,22 @@
 .title-section{
-    font-size: 3rem;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    position: relative;
+
+    // &:after{
+    //     content: '';
+    //     width: 100px;
+    //     height: 3px;
+    //     background-color: $purple;
+    //     position: absolute;
+    //     margin: 0 auto;
+    //     display: block;
+    //     bottom: -50px;
+    //     text-align: center;
+    // }
 }
 
 .title-sub {
     margin-top: -20px;
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
