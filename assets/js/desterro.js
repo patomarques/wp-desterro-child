@@ -1,10 +1,33 @@
 (function($) {
     $(document).ready(function() {
-        // $('.modal-bs').on('shown.bs.modal', function () {
-        //     $('#myInput').trigger('focus')
+        $('.card-button').on('click', function(){
+            console.log('click', $(this).data());
+
+            let modalMembers = $('#teamMembersModal');
+            modalMembers.find('.modal-title').text($(this).data('title'));
+            modalMembers.find('.member-resume').html($(this).data('resume'));
+            modalMembers.find('.member-img').attr('src', $(this).data('img'));
+            modalMembers.find('.member-cargo').text($(this).data('cargo'));
+        });
+
+        $('.nav-link').on('click', function(){            
+            $('.toggle')[0].click();
+            //$('.toggle')[0].toggleClass('noVisibile');
+
+            var sectionToScroll = $(this).attr('href').replace('#', '#section-');
+            $("html, body").animate({
+                scrollTop: $(sectionToScroll).offset().top - 30
+            });
+        });
+
+        
+        // $('.cards-carousel').slick({
+        //     arrows: true,
+        //     dots: true,
+        //     mobileFirst: true,
+        //     slidesToShow: 3
         // });
 
-          
         $('#toggle').click(function() {
             $(this).toggleClass('active');
             $('#overlay').toggleClass('open');
