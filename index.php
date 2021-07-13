@@ -83,7 +83,7 @@ $page_id = get_option( 'page_for_posts' );
   $queryMembers = new WP_Query( $members ); 
 ?>
 
-<section id="expediente" class="container-full content-section mb-0">
+<section id="expediente" class="container-fluid content-section mt-5 mb-5 pt-5">
   <div class="container">
     <div class="row mb-5">
       <div class="col-12 text-center">
@@ -91,55 +91,52 @@ $page_id = get_option( 'page_for_posts' );
         <h3 class="title-sub">Ficha Técnica </h3>
       </div>
     </div>
-    <div class="row text-center">
-      <?php while ( $queryMembers->have_posts() ) : $queryMembers->the_post(); ?>
+    <div class="row text-center cards-carousel">
+      
+        <?php while ( $queryMembers->have_posts() ) : $queryMembers->the_post(); ?>
 
-        <div class="col-3 ">
-          <div class="card-perfil">
-              <div class="card-perfil__header ">
-                <img class="card-perfil__img rounded-circle" src="<?= the_post_thumbnail_url() ?>" alt="<?= get_the_title() ?>">
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title mb-0"><?= the_title() ?></h5>
-                <h6 class="card-title bold "><?= get_post_custom()['Função'][0] ?></h6>
-                <p class="card-text hidden">Professional resume</p>
-                <ul class="social-icons d-none justify-content-center text-center">
-                    <li class="social-icons__item d-flex"><a href="#" class="social-icons__link social-icons__link--actived"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="social-icons__item d-flex"><a href="#" class="social-icons__link"><i class="fab fa-instagram"></i></a></li>
-                    <li class="social-icons__item d-flex"><a href="#" class="social-icons__link"><i class="fab fa-youtube"></i></a></li>
-                </ul>
-              </div>
-            </div>        
-        </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 cards-carousel__item">
+            <button class="card-perfil card-button" type="button" data-toggle="modal" data-target="#teamMembersModal" 
+              data-title="<?= get_the_title() ?>" data-resume="<?= the_content() ?>" data-cargo="<?= get_post_custom()['Função'][0] ?>" data-img="<?= the_post_thumbnail_url() ?>">
+                <div class="card-perfil__header">
+                  <img class="card-perfil__img rounded-circle" src="<?= the_post_thumbnail_url() ?>" alt="<?= get_the_title() ?>">
+                </div>
+                <div class="card-body text-center pt-2">
+                  <h5 class="card-title mb-0"><?= the_title() ?></h5>
+                  <h6 class="card-title bold "><?= get_post_custom()['Função'][0] ?></h6>
+                  <ul class="social-icons d-none justify-content-center text-center">
+                      <li class="social-icons__item d-flex"><a href="#" class="social-icons__link social-icons__link--actived"><i class="fab fa-facebook-f"></i></a></li>
+                      <li class="social-icons__item d-flex"><a href="#" class="social-icons__link"><i class="fab fa-instagram"></i></a></li>
+                      <li class="social-icons__item d-flex"><a href="#" class="social-icons__link"><i class="fab fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </button>        
+          </div>
 
-      <?php 
-        endwhile;
-        wp_reset_postdata(); 
-      ?>
+        <?php 
+          endwhile;
+          wp_reset_postdata(); 
+        ?>
     </div>
   </div>
 </section>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-  Launch static backdrop modal
-</button>
-
-<div class="modal" tabindex="-1">
-  <div class="modal-dialog">
+<!-- basic modal -->
+<div class="modal fade " id="teamMembersModal" tabindex="-1" role="dialog" aria-labelledby="teamMembersModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
+        <h4 class="modal-title" id="myModalLabel">Basic Modal</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        <h3 class="member-resume">Modal Body</h3>
+        <h4 class="member-cargo"></h4>
+        <img src="" alt="" class="member-img img-fluid" >
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
